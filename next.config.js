@@ -1,13 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    serverActions: {
-      bodySizeLimit: '2mb',
-    },
-  },
+  output: 'export',
   images: {
-    remotePatterns: [],
+    unoptimized: true,
   },
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
+  trailingSlash: true,
 }
 
 module.exports = nextConfig
